@@ -1,1 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caring with Compassion - A Guide to Senior Care</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #e8f4f8 0%, #d1ecf1 100%);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            padding: 2rem;
+        }
+        
+        .book-cover {
+            width: 240px;
+            height: 320px;
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border-radius: 8px;
+            margin: 0 auto 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            position: relative;
+            border: 1px solid #dee2e6;
+        }
+        
+        .book-content {
+            padding: 1.5rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .book-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c5282;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .book-subtitle {
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .book-author {
+            font-size: 1rem;
+            color: #2d3748;
+            font-weight: 500;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            color: #2c5282;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .cta-button {
+            padding: 18px 35px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .primary {
+            background: #3182ce;
+            color: white;
+            box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+        }
+        
+        .primary:hover {
+            background: #2c5282;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(49, 130, 206, 0.4);
+        }
+        
+        .secondary {
+            background: transparent;
+            color: #3182ce;
+            border: 2px solid #3182ce;
+        }
+        
+        .secondary:hover {
+            background: #3182ce;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .section h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c5282;
+            font-weight: 600;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .author-section {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #3182ce;
+        }
+        
+        .author-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 12px;
+            background: linear-gradient(45deg, #3182ce, #2c5282);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .credentials {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .credentials h4 {
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .book-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid #3182ce;
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-card h3 {
+            color: #2c5282;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .testimonial {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            font-style: italic;
+            margin: 2rem 0;
+            border-left: 4px solid #68d391;
+        }
+        
+        .newsletter {
+            background: linear-gradient(135deg, #2c5282 0%, #2d3748 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 2rem auto 0;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .newsletter input {
+            flex: 1;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
+        .newsletter button {
+            padding: 18px 25px;
+            background: #48bb78;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .newsletter button:hover {
+            background: #38a169;
+        }
+        
+        .coming-soon {
+            background: #e6fffa;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 2rem 0;
+            border: 2px solid #81e6d9;
+        }
+        
+        .release-date {
+            font-size: 1.8rem;
+            color: #2c5282;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            body { font-size: 16px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            .about-grid { 
+                grid-template-columns: 1fr; 
+                text-align: center;
+                gap: 2rem;
+            }
+            .newsletter-form { 
+                flex-direction: column; 
+                gap: 0.5rem;
+            }
+            .cta-group { flex-direction: column; align-items: center; }
+            .book-cover { width: 200px; height: 280px; }
+            .section { padding: 3rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="book-cover">
+                <div class="book-content">
+                    <div class="book-title">Caring with Compassion</div>
+                    <div class="book-subtitle">A Nurse's Guide to Quality Senior Care</div>
+                    <div class="book-author">by [Author Name], RN</div>
+                </div>
+            </div>
+            <h1>Essential Guidance for Senior Care</h1>
+            <p>A comprehensive resource written by an experienced healthcare professional to help families navigate the complexities of caring for aging loved ones with dignity and compassion.</p>
+            
+            <div class="coming-soon">
+                <h3>📅 Coming Soon</h3>
+                <div class="release-date">Expected Release: [Month] 2025</div>
+                <p>Be among the first to receive this invaluable care guide</p>
+            </div>
+            
+            <div class="cta-group">
+                <a href="#notify" class="cta-button primary">Get Notified When Available</a>
+                <a href="#about" class="cta-button secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
 
+    <section id="about" class="section">
+        <h2>About This Essential Guide</h2>
+        <div class="about-grid">
+            <div class="author-section">
+                <div class="author-photo">👩‍⚕️</div>
+                <div class="credentials">
+                    <h4>Professional Credentials</h4>
+                    <p>Registered Nurse with [X] years of experience in geriatric care and healthcare consultation for seniors and their families.</p>
+                </div>
+            </div>
+            <div>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                    "Caring with Compassion" bridges the gap between clinical expertise and practical, everyday care solutions. This book provides families with the knowledge and confidence they need to make informed decisions about senior care, whether at home or in professional settings.
+                </p>
+                <p style="color: #4a5568; margin-bottom: 2rem;">
+                    Drawing from years of hands-on experience in geriatric nursing and healthcare consultation, this guide offers practical strategies, compassionate insights, and evidence-based approaches to common challenges in senior care.
+                </p>
+            </div>
+        </div>
+
+        <div class="book-benefits">
+            <div class="benefit-card">
+                <div class="benefit-icon">🏠</div>
+                <h3>Home Care Guidance</h3>
+                <p>Practical advice for creating safe, comfortable living environments and managing daily care routines at home.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">💊</div>
+                <h3>Health Management</h3>
+                <p>Clear guidance on medication management, health monitoring, and when to seek professional medical assistance.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">❤️</div>
+                <h3>Emotional Support</h3>
+                <p>Strategies for maintaining dignity, managing challenging behaviors, and supporting both seniors and caregivers emotionally.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">👥</div>
+                <h3>Family Resources</h3>
+                <p>Tools for family communication, decision-making, and finding the right professional care services when needed.</p>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <p>"Having a resource like this would have made such a difference when we were caring for my mother. The practical advice combined with genuine compassion is exactly what families need during these challenging times."</p>
+            <p style="margin-top: 1rem; font-weight: 600; color: #2c5282;">— Early Reader Review</p>
+        </div>
+    </section>
+
+    <section id="notify" class="section newsletter">
+        <h2>Stay Informed About the Release</h2>
+        <p style="font-size: 1.2rem;">Be the first to know when "Caring with Compassion" becomes available. Get updates on the release date, exclusive previews, and special launch pricing.</p>
+        <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Notify Me</button>
+        </form>
+        <p style="margin-top: 1.5rem; opacity: 0.9; font-size: 1rem;">
+            We respect your privacy. No spam, and you can unsubscribe at any time.
+        </p>
+    </section>
+
+    <script>
+        // Newsletter form
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            alert('Thank you for your interest! We\'ll notify you as soon as "Caring with Compassion" is available.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Accessibility improvements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ensure good contrast and readability for senior users
+            const style = document.createElement('style');
+            style.textContent = `
+                @media (prefers-reduced-motion: reduce) {
+                    *, *::before, *::after {
+                        animation-duration: 0.01ms !important;
+                        animation-iteration-count: 1 !important;
+                        transition-duration: 0.01ms !important;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
